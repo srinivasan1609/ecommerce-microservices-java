@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  ecommerce-user-service:
+    build:
+      context: .
+      dockerfile: ecommerce-java-microservices-user/Dockerfile
+    expose:
+      - 5001
+    ports:
+      - 5001:5001
+
+

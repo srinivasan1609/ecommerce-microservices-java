@@ -1,0 +1,1 @@
+INSERT INTO USERS (id, email, first_name, last_name, password) VALUES (1, 'test@abc.com', 'test', 'test', '12345')
