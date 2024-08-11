@@ -1,0 +1,7 @@
+INSERT INTO PRODUCTS (id, brand, category, description, name, price) VALUES (1, 'Penguin Books', 'Books', 'Explanations that Transform The World', 'The Beginning Of Infinity',  '500')
+INSERT INTO PRODUCTS (id, brand, category, description, name, price) VALUES (2, 'Jaico Publishing House', 'Books', '', 'The Psychology of Money',  '250')
+INSERT INTO PRODUCTS (id, brand, category, description, name, price) VALUES (3, 'Benq', 'Computer Accessories', '1080p resolution', 'BenQ 24 inch Monitor',  '8500')
+INSERT INTO PRODUCTS (id, brand, category, description, name, price) VALUES (4, 'Benq', 'Computer Accessories', '1080p resolution', 'BenQ 22 inch Monitor',  '6500')
+INSERT INTO PRODUCTS (id, brand, category, description, name, price) VALUES (5, 'Logitech', 'Computer Accessories', 'Wireless Mouse', 'Logitech Wireless Mouse',  '500')
+INSERT INTO PRODUCTS (id, brand, category, description, name, price) VALUES (6, 'Apple', 'Mobile Phones and Tablets', '5G supported', 'Iphone 13',  '65000')
+INSERT INTO PRODUCTS (id, brand, category, description, name, price) VALUES (7, 'Redmi', 'Mobile Phones and Tablets', '5G supported', 'Redmi Note 15',  '15000')
