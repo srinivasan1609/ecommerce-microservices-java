@@ -29,6 +29,11 @@ public class ProductController {
         return ResponseEntity.ok(productService.createProduct(createRequest));
     }
 
+    @GetMapping("/getProduct/{productId}")
+    public ResponseEntity<ProductEntity> getProduct(@PathVariable("productId") Long productId) throws ApplicationException {
+        return ResponseEntity.ok(productService.getProduct(productId));
+    }
+
     @GetMapping("/findProducts")
     public ResponseEntity<Page<ProductEntity>> findProducts(@RequestParam(required = false) List<String> filter,
                                                             @RequestParam(defaultValue = "price") String sortBy,

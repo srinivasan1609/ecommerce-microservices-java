@@ -1,13 +1,50 @@
 version: '3.6'
 
 services:
+  ecommerce-service-registry:
+    build:
+      context: .
+      dockerfile: /ecommerce-service-registry/Dockerfile
+    ports:
+      - 5000:5000
+    networks:
+      - ecommerce_network
   ecommerce-user-service:
     build:
       context: .
-      dockerfile: ecommerce-java-microservices-user/Dockerfile
-    expose:
-      - 5001
+      dockerfile: /ecommerce-java-microservices-user/Dockerfile
     ports:
       - 5001:5001
+    depends_on:
+      - ecommerce-service-registry
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://ecommerce-service-registry:5000/eureka
+    networks:
+      - ecommerce_network
+      
+  ecommerce-orders-service:
+    build:
+      context: .
+      dockerfile: /ecommerce-orders/Dockerfile
+    ports:
+      - 5003:5003
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://ecommerce-service-registry:5000/eureka
+    networks:
+      - ecommerce_network
+  
+  ecommerce-products-service:
+    build:
+      context: .
+      dockerfile: /ecommerce-products/Dockerfile
+    ports:
+      - 5002:5002
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://ecommerce-service-registry:5000/eureka
+    networks:
+      - ecommerce_network
+      
 
-
+networks:
+  ecommerce_network:
+    name: ecommerce_network

@@ -29,7 +29,10 @@ public class ProductService {
                 .category(createRequest.getCategory())
                 .description(createRequest.getDescription()).build();
         return productRepository.save(productEntity);
+    }
 
+    public ProductEntity getProduct(Long id) throws ApplicationException {
+        return productRepository.findById(id).orElseThrow(() -> new ApplicationException("No products found for the id " + id, 002));
     }
 
     public ProductEntity updateProduct(ProductCreateRequest createRequest, Long productId) throws ApplicationException {

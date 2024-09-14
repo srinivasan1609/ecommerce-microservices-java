@@ -1,8 +1,8 @@
 FROM openjdk:21-slim
 MAINTAINER srinivasan
-WORKDIR /ecommerce-java-microservices-user
+WORKDIR /ecommerce-products
 CMD ["./gradlew", "clean", "bootJar"]
-COPY ecommerce-java-microservices-user/build/libs/*.jar app.jar
+COPY ecommerce-products/build/libs/*.jar app.jar
 
-EXPOSE 5001
+EXPOSE 5002
 ENTRYPOINT ["java", "-jar", "app.jar"]
