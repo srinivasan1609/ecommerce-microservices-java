@@ -35,8 +35,8 @@ jobs:
 
     - name: Build with Gradle Wrapper
       run: |
-          chmod +x ./gradlew
-          ./gradlew bootJar
+          chmod +x ./ecommerce-orders/gradlew
+          ./ecommerce-orders/gradlew bootJar
 
     - name: Copy Jar file
       run: mv build/libs/$(ls build/libs) app.jar
