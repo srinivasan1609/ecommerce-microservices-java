@@ -12,5 +12,6 @@ public class ExceptionMessage {
     private String description;
     private String instance;
     private String type;
+    private String load;
     // standard getters and setters
 }
