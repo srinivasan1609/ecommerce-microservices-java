@@ -19,6 +19,10 @@ import java.util.Set;
 @Table(name = "orders")
 public class OrderEntity {
 
+    public OrderEntity() {
+        super();
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

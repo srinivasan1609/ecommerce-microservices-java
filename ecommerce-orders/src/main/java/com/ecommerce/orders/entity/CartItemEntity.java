@@ -1,10 +1,7 @@
 package com.ecommerce.orders.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -15,6 +12,10 @@ import java.math.BigDecimal;
 @Builder
 @Table(name = "cart_item")
 public class CartItemEntity {
+
+    public CartItemEntity() {
+        super();
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
